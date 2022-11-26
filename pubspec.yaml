@@ -12,13 +12,15 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-
   cupertino_icons: ^1.0.2
+  provider:
+  http:
+  dio:
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-
+  fluttertoast:
   flutter_lints: ^2.0.0
 
 flutter:
