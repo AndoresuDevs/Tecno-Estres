@@ -14,52 +14,67 @@ class FormLogin extends StatefulWidget {
 class _FormLoginState extends State<FormLogin> {
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView( //SCROLL VIEW
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          const SizedBox(height: 20),
-          Container(
-            padding: const EdgeInsets.symmetric(horizontal: 15),
-            margin: const EdgeInsets.symmetric(horizontal: 15),
-            width: MediaQuery.of(context).size.width-30,
-            child: Column(
-              children: const [
-                Text( "Bienvenido a IMAvision!", style: TextStyle(fontSize: 34, decorationStyle: TextDecorationStyle.solid),),
-                SizedBox(height: 20),
-
-              ],
-            ),
-          ),
-          _plainText(context,"IMAvision es una herramienta ideal para todo interesado en la ingenieria, una perfecta guia de aprendizaje a una nueva experiencia academicay laboral. Únete completamente gratiso inicia sesión y empieza a forjarte como un ingeniero a tu medida"),
-          const SizedBox(height: 20),
-          _plainText(context, "CORREO ELECTRONICO:"),
-          const SizedBox(height: 8),
-          _inputCorreo(),
-          const SizedBox(height: 20),
-          _plainText(context, "CONTRASEÑA"),
-          const SizedBox(height: 8),
-          _inputPassword(),
-          const SizedBox(height: 60),
-          _plainText(context, "Olvidaste tu contraseña? Click aquí en recuperar cuenta"),
-          const SizedBox(height: 30),
-          _btnIniciarSesion(context),
-          const SizedBox(height: 10),
-          _btnRegistrate(context),
-          const SizedBox(height: 10),
-          _btnAcercaDe(context),
-          /*
-          FILA PARA AGRUPAR OBJETOS
-          Row(
-            children: [
-              SizedBox(width: MediaQuery.of(context).size.width*0.5,child: _inputCorreo(),),
-              SizedBox(width: MediaQuery.of(context).size.width*0.5,child: _inputPassword(),)
-            ],
-          )
-           */
-        ],
+    return Scaffold(
+        appBar: AppBar(
+        title: const Text('Sample Code'),
       ),
+      body: Column(
+      children: [
+        SingleChildScrollView( //SCROLL VIEW
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              const SizedBox(height: 20),
+              Container(
+                padding: const EdgeInsets.symmetric(horizontal: 15),
+                margin: const EdgeInsets.symmetric(horizontal: 15),
+                width: MediaQuery.of(context).size.width-30,
+                child: Column(
+                  children: const [
+                    Text( "Bienvenido a IMAvision!", style: TextStyle(fontSize: 34, decorationStyle: TextDecorationStyle.solid),),
+                    SizedBox(height: 20),
+
+                  ],
+                ),
+              ),
+              _plainText(context,"IMAvision es una herramienta ideal para todo interesado en la ingenieria, una perfecta guia de aprendizaje a una nueva experiencia academicay laboral. Únete completamente gratiso inicia sesión y empieza a forjarte como un ingeniero a tu medida"),
+              const SizedBox(height: 20),
+              _plainText(context, "CORREO ELECTRONICO:"),
+              const SizedBox(height: 8),
+
+              _inputCorreo(),
+              const SizedBox(height: 20),
+              _plainText(context, "CONTRASEÑA"),
+              const SizedBox(height: 8),
+              _inputPassword(),
+              const SizedBox(height: 60),
+              _plainText(context, "Olvidaste tu contraseña? Click aquí en recuperar cuenta"),
+              const SizedBox(height: 30),
+              _btnIniciarSesion(context),
+              const SizedBox(height: 10),
+              _btnRegistrate(context),
+              const SizedBox(height: 10),
+              _btnAcercaDe(context),
+
+            ],
+          ),
+        ),
+      ],
+    )
+
     );
+
+    /*
+              FILA PARA AGRUPAR OBJETOS
+              Row(
+                children: [
+                  SizedBox(width: MediaQuery.of(context).size.width*0.5,child: _inputCorreo(),),
+                  SizedBox(width: MediaQuery.of(context).size.width*0.5,child: _inputPassword(),)
+                ],
+              )
+               */
+
+
   }
 
   Container _plainText(BuildContext context, String texto) {
@@ -117,14 +132,21 @@ class _FormLoginState extends State<FormLogin> {
         ),
         padding: const EdgeInsets.symmetric(horizontal: 15),
         margin: const EdgeInsets.symmetric(horizontal: 15),
-        child: TextFormField(
-
-          style: const TextStyle(fontSize: 20),
-          decoration: const InputDecoration(
-              hintText: "Ingrese su correo",
-              border: InputBorder.none
+        child: const Padding(
+          padding: EdgeInsets.symmetric(horizontal: 1,vertical: 1),
+          child: TextField(
+            style: TextStyle(fontSize: 20),
+            decoration: InputDecoration(
+                hintText: "Ingrese su correo",
+                border: InputBorder.none
+            ),
           ),
         ),
+
+
+
+
+
       );
   }
 
@@ -136,9 +158,9 @@ class _FormLoginState extends State<FormLogin> {
       ),
       padding: const EdgeInsets.symmetric(horizontal: 15),
       margin: const EdgeInsets.symmetric(horizontal: 15),
-      child: TextFormField(
-        style: const TextStyle(fontSize: 20),
-        decoration: const InputDecoration(
+      child: const TextField(
+        style: TextStyle(fontSize: 20),
+        decoration: InputDecoration(
             hintText: "Ingrese su contraseña",
             border: InputBorder.none
         ),

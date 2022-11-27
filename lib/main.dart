@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:tecno_estres/vistas/acerca_de.dart';
-
 import 'package:tecno_estres/vistas/formulario_login.dart';
 
 void main() {
@@ -18,12 +17,11 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: buildMaterialColor(const Color(0xFF008F39))
       ),
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Iniciar Sesion'),
-        ),
+      home: const Scaffold(
         body: FormLogin(),
       ),
+
+
       routes: {
         '/login':(Context)=> const FormLogin(),
         '/acerca_de':(Context)=> const AcercaDe(),
