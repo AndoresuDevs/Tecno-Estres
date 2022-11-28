@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:tecno_estres/vistas/acerca_de.dart';
+import 'package:tecno_estres/vistas/formulario_estudiantil.dart';
 import 'package:tecno_estres/vistas/formulario_login.dart';
+import 'package:tecno_estres/vistas/registro_completo.dart';
+import 'package:tecno_estres/vistas/registro_general.dart';
+import 'package:tecno_estres/vistas/tipo_de_registro.dart';
 
 void main() {
   runApp( const MyApp());
@@ -23,8 +27,14 @@ class MyApp extends StatelessWidget {
 
 
       routes: {
-        '/login':(Context)=> const FormLogin(),
-        '/acerca_de':(Context)=> const AcercaDe(),
+        '/login':(_)=> const FormLogin(),
+        '/acerca_de':(_)=> const AcercaDe(),
+        '/registroEst1':(_)=> const FormRegister(),
+        '/registroEst2':(_)=> const FormStudent(),
+        '/registroCompletado':(_)=> const RegistroCompletado(),
+        '/tipo_registro':(_)=> const TipoRegistro(),
+
+
 
       }
 

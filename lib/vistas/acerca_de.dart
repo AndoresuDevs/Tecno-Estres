@@ -11,7 +11,7 @@ class _AcercaDeState extends State<AcercaDe> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: const Text('Sample Code'),
+          title: const Text('Acerca de...'),
         ),
         body: Column(
           children: [
@@ -26,19 +26,36 @@ class _AcercaDeState extends State<AcercaDe> {
                     width: MediaQuery.of(context).size.width-30,
                     child: Column(
                       children: const [
-                        Text( "Bienvenido a IMAvision!", style: TextStyle(fontSize: 34, decorationStyle: TextDecorationStyle.solid),),
+                        Text( "Acerca de IMAvision!", style: TextStyle(fontSize: 34, decorationStyle: TextDecorationStyle.solid),),
                         SizedBox(height: 20),
 
                       ],
                     ),
                   ),
-                  _plainText(context,"IMAvision es una herramienta ideal para todo interesado en la ingenieria, una perfecta guia de aprendizaje a una nueva experiencia academicay laboral. Únete completamente gratiso inicia sesión y empieza a forjarte como un ingeniero a tu medida"),
+                  _plainText(context,"IMAvision es una plataforma orientada a todos los ingenieros de la rama mecanica administrativa, fue conceptualizada en enero de 2022, y desarrollada con fuente de investigación y herramienta de estudio descargable para los estudiantes."),
                   const SizedBox(height: 20),
-                  _plainText(context, "CORREO ELECTRONICO:"),
+                  _plainText(context, "INTEGRANTES:"),
                   const SizedBox(height: 8),
 
-                  _plainText(context, "Olvidaste tu contraseña? Click aquí en recuperar cuenta"),
-                  const SizedBox(height: 30),
+                  _plainText(context, "PROJECT MANAGER: VALERIA PAOLA GONZALES DUEÑEZ"),
+                  const SizedBox(height: 60),
+                  Container(
+                    margin: const EdgeInsets.symmetric(horizontal: 15),
+                    width: MediaQuery.of(context).size.width-30,
+                    child: const Text("EQUIPO DE DESARROLLO:"),
+                  ),
+
+
+                  const SizedBox(height: 100),
+
+                  _plainText(context, 'ESTE PROTOTIPO ESTA EN FASE ALPHA, SE DEBE DE CONSIDERAR CAMBIOS PERTINENTES Y POSIBLES ERRORES O BUGS QUE INTERRUMPAN LA EXPERIENCIA DE USO, SI OBYIENE ESTE PROBLEMA CONTACTE AL SIGUIENTE CORREO:'),
+                  const SizedBox(height: 20),
+                  Container(
+                    margin: const EdgeInsets.symmetric(horizontal: 15),
+                    width: MediaQuery.of(context).size.width-30,
+                    child: const Text("devsupport@imavision.com", style: TextStyle(color: Colors.blue),),
+                  ),
+                  const SizedBox(height: 50),
                   _btnRegresar(context)
 
                 ],

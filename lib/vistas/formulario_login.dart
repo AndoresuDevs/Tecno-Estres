@@ -16,7 +16,7 @@ class _FormLoginState extends State<FormLogin> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-        title: const Text('Sample Code'),
+        title: const Text('Login'),
       ),
       body: Column(
       children: [
@@ -104,7 +104,9 @@ class _FormLoginState extends State<FormLogin> {
       margin: const EdgeInsets.all(15),
       width: MediaQuery.of(context).size.width-30,
       child: ElevatedButton(
-        onPressed: () {},
+        onPressed: () {
+          Navigator.pushReplacementNamed(context, '/tipo_registro');
+        },
         child: const Text('Registrate'),
       ),
     );
