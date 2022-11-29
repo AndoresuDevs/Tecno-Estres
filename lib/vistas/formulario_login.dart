@@ -48,13 +48,15 @@ class _FormLoginState extends State<FormLogin> {
               const SizedBox(height: 8),
               _inputPassword(),
               const SizedBox(height: 60),
-              _plainText(context, "Olvidaste tu contraseña? Click aquí en recuperar cuenta"),
+              _plainText(context, "Olvidaste tu contraseña? Click aquí en recuperar contraseña"),
               const SizedBox(height: 30),
               _btnIniciarSesion(context),
               const SizedBox(height: 10),
               _btnRegistrate(context),
               const SizedBox(height: 10),
               _btnAcercaDe(context),
+              const SizedBox(height: 10),
+              _btnRecuperar(context),
 
             ],
           ),
@@ -85,14 +87,29 @@ class _FormLoginState extends State<FormLogin> {
         );
   }
 
+  Container _btnRecuperar(BuildContext context) {
+    return Container(
+      height: 40,
+      margin: const EdgeInsets.all(15),
+      width: MediaQuery.of(context).size.width-30,
+      child: ElevatedButton(
+        onPressed: () {
+          Navigator.pushReplacementNamed(context, '/recuperacion_1');
+        },
+        child: const Text('Recuperar Contraseña'),
+      ),
+    );
+  }
+
   Container _btnIniciarSesion(BuildContext context) {
     return Container(
           height: 40,
           margin: const EdgeInsets.all(15),
           width: MediaQuery.of(context).size.width-30,
           child: ElevatedButton(
-
-            onPressed: () {},
+            onPressed: () {
+              Navigator.pushReplacementNamed(context, '/registroCompletado');
+            },
             child: const Text('Iniciar Sesion'),
           ),
         );

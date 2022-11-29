@@ -76,7 +76,9 @@ class _TipoRegistroState extends State<TipoRegistro> {
           Row(
             mainAxisAlignment: MainAxisAlignment.end,
             children: <Widget>[
-              MaterialButton(onPressed: () => {}, child: Text('Aceptar')),
+              MaterialButton(onPressed: () => {
+                Navigator.pushReplacementNamed(context, '/registroEgresado')
+              }, child: const Text('Aceptar')),
             ],
           )
         ],
@@ -103,7 +105,9 @@ class _TipoRegistroState extends State<TipoRegistro> {
           Row(
             mainAxisAlignment: MainAxisAlignment.end,
             children: <Widget>[
-              MaterialButton(onPressed: () => {}, child: Text('Aceptar')),
+              MaterialButton(onPressed: () => {
+                Navigator.pushReplacementNamed(context, '/registroDoc')
+              }, child: Text('Aceptar')),
             ],
           )
         ],

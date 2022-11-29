@@ -1,7 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:tecno_estres/vistas/Encuesta_1.dart';
+import 'package:tecno_estres/vistas/Encuesta_2.dart';
+import 'package:tecno_estres/vistas/Inicio.dart';
 import 'package:tecno_estres/vistas/acerca_de.dart';
+import 'package:tecno_estres/vistas/exp_doc.dart';
+import 'package:tecno_estres/vistas/exp_egre.dart';
+import 'package:tecno_estres/vistas/formulario_docente.dart';
+import 'package:tecno_estres/vistas/formulario_egre_1.dart';
 import 'package:tecno_estres/vistas/formulario_estudiantil.dart';
 import 'package:tecno_estres/vistas/formulario_login.dart';
+import 'package:tecno_estres/vistas/recuperacion_1.dart';
+import 'package:tecno_estres/vistas/recuperacion_2.dart';
+import 'package:tecno_estres/vistas/recuperacion_3.dart';
+import 'package:tecno_estres/vistas/recuperacion_4.dart';
 import 'package:tecno_estres/vistas/registro_completo.dart';
 import 'package:tecno_estres/vistas/registro_general.dart';
 import 'package:tecno_estres/vistas/tipo_de_registro.dart';
@@ -31,8 +42,19 @@ class MyApp extends StatelessWidget {
         '/acerca_de':(_)=> const AcercaDe(),
         '/registroEst1':(_)=> const FormRegister(),
         '/registroEst2':(_)=> const FormStudent(),
+        '/registroDoc':(_)=> const FormDoc(),
+        '/registroEgresado':(_)=> const FormEgre(),
         '/registroCompletado':(_)=> const RegistroCompletado(),
         '/tipo_registro':(_)=> const TipoRegistro(),
+        '/exp_egre':(_)=> const Exp_egre(),
+        '/exp_doc':(_)=> const Exp_doc(),
+        '/recuperacion_1':(_)=> const recuperacion_1(),
+        '/recuperacion_2':(_)=> const recuperacion_2(),
+        '/recuperacion_3':(_)=> const recuperacion_3(),
+        '/recuperacion_4':(_)=> const recuperacion_4(),
+        '/Inicio':(_)=> const Inicio(),
+        '/encuesta_1':(_)=> const Encuesta_1(),
+        '/encuesta_2':(_)=> const Encuesta_2(),
 
 
 

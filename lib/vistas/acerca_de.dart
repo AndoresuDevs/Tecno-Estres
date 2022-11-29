@@ -45,8 +45,18 @@ class _AcercaDeState extends State<AcercaDe> {
                     child: const Text("EQUIPO DE DESARROLLO:"),
                   ),
 
+                  const SizedBox(height: 10),
 
-                  const SizedBox(height: 100),
+                  _plainText(context, "Alvaro López Margáin 1845876"),
+                  const SizedBox(height: 8),
+
+                  _plainText(context, "Andres Alberto Dimas Martinez 1871632"),
+                  const SizedBox(height: 8),
+
+                  _plainText(context, "Pedro Alarcon Sanchez 1942568"),
+                  const SizedBox(height: 8),
+
+                  const SizedBox(height: 40),
 
                   _plainText(context, 'ESTE PROTOTIPO ESTA EN FASE ALPHA, SE DEBE DE CONSIDERAR CAMBIOS PERTINENTES Y POSIBLES ERRORES O BUGS QUE INTERRUMPAN LA EXPERIENCIA DE USO, SI OBYIENE ESTE PROBLEMA CONTACTE AL SIGUIENTE CORREO:'),
                   const SizedBox(height: 20),

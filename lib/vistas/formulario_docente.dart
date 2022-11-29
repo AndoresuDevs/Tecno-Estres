@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
 
-class FormEgre extends StatefulWidget {
-  const FormEgre({Key? key}) : super(key: key);
+class FormDoc extends StatefulWidget {
+  const FormDoc({Key? key}) : super(key: key);
 
   @override
-  State<FormEgre> createState() => _FormEgreState();
+  State<FormDoc> createState() => _FormDocState();
 }
 
-class _FormEgreState extends State<FormEgre> {
+class _FormDocState extends State<FormDoc> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text("Muy bien, datos del egresado"),),
+      appBar: AppBar(title: const Text("Muy bien, datos del docente"),),
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -41,9 +41,13 @@ class _FormEgreState extends State<FormEgre> {
             const SizedBox(height: 5),
             _inputAnoEgreso(),
             const SizedBox(height: 20),
-            _textNumero(),
+            _textMatricula(),
             const SizedBox(height: 5),
-            _inputNumero(),
+            _inputMatricula(),
+            const SizedBox(height: 20),
+            _textCedula(),
+            const SizedBox(height: 5),
+            _inputCedula(),
             const SizedBox(height: 20),
             _btnSiguiente(context),
             const SizedBox(height: 20),
@@ -138,12 +142,26 @@ class _FormEgreState extends State<FormEgre> {
     );
   }
 
-  Container _textNumero() {
+  Container _textMatricula() {
     return Container(
       margin: const EdgeInsets.symmetric(horizontal: 15),
       width: MediaQuery.of(context).size.width - 30,
       child: const Text(
-        "# de Cedula Profesional",
+        "Matrícula o ID de docente",
+        style: TextStyle(
+            color: Colors.black,
+            fontSize: 20
+        ),
+      ),
+    );
+  }
+
+  Container _textCedula() {
+    return Container(
+      margin: const EdgeInsets.symmetric(horizontal: 15),
+      width: MediaQuery.of(context).size.width - 30,
+      child: const Text(
+        "Cedula Profesional",
         style: TextStyle(
             color: Colors.black,
             fontSize: 20
@@ -235,14 +253,13 @@ class _FormEgreState extends State<FormEgre> {
       child: const TextField(
         style: TextStyle(fontSize: 20),
         decoration: InputDecoration(
-            hintText: "Año",
+            hintText: "Año de egreso",
             border: InputBorder.none
         ),
       ),
     );
   }
-
-  Container _inputNumero() {
+  Container _inputCedula() {
     return Container(
       decoration: BoxDecoration(borderRadius: BorderRadius.circular(5), border: Border.all(color: Colors.green)),
       padding: const EdgeInsets.symmetric(horizontal: 15),
@@ -250,7 +267,22 @@ class _FormEgreState extends State<FormEgre> {
       child: const TextField(
         style: TextStyle(fontSize: 20),
         decoration: InputDecoration(
-            hintText: "# de Cedula Profesional",
+            hintText: "Cedula Profesional",
+            border: InputBorder.none
+        ),
+      ),
+    );
+  }
+
+  Container _inputMatricula() {
+    return Container(
+      decoration: BoxDecoration(borderRadius: BorderRadius.circular(5), border: Border.all(color: Colors.green)),
+      padding: const EdgeInsets.symmetric(horizontal: 15),
+      margin: const EdgeInsets.symmetric(horizontal: 15),
+      child: const TextField(
+        style: TextStyle(fontSize: 20),
+        decoration: InputDecoration(
+            hintText: "Matricula",
             border: InputBorder.none
         ),
       ),
@@ -267,7 +299,7 @@ class _FormEgreState extends State<FormEgre> {
       width: MediaQuery.of(context).size.width-30,
       child: ElevatedButton(
         onPressed: () {
-          Navigator.pushReplacementNamed(context, '/exp_egre');
+          Navigator.pushReplacementNamed(context, '/exp_doc');
         },
         child: const Text('SIGUIENTE'),
       ),

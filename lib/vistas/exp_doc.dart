@@ -1,49 +1,45 @@
 import 'package:flutter/material.dart';
 
-class FormEgre extends StatefulWidget {
-  const FormEgre({Key? key}) : super(key: key);
+class Exp_doc extends StatefulWidget {
+  const Exp_doc({Key? key}) : super(key: key);
 
   @override
-  State<FormEgre> createState() => _FormEgreState();
+  State<Exp_doc> createState() => _Exp_docState();
 }
 
-class _FormEgreState extends State<FormEgre> {
+class _Exp_docState extends State<Exp_doc> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text("Muy bien, datos del egresado"),),
+      appBar: AppBar(title: const Text("Experiencia Laboral Docente"),),
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const SizedBox(height: 20),
-            _textUniversidad(),
+            _textPuesto(),
             const SizedBox(height: 5),
-            _inputUniversidad(),
+            _inputPuesto(),
             const SizedBox(height: 20),
-            _textFacultad(),
+            _textEmpresa(),
             const SizedBox(height: 5),
-            _inputFacultad(),
+            _inputEmpresa(),
             const SizedBox(height: 20),
-            _textCarrera(),
+            _textCorreo(),
             const SizedBox(height: 5),
-            _inputCarrera(),
+            _inputCorreo(),
             const SizedBox(height: 20),
-            _textPlanEstudios(),
+            _textFechaA(),
             const SizedBox(height: 5),
-            _inputPlanEstudios(),
+            _inputFechaA(),
             const SizedBox(height: 20),
-            _textInscripcion(),
+            _textFechaB(),
             const SizedBox(height: 5),
-            _inputInscripcion(),
+            _inputFechaB(),
             const SizedBox(height: 20),
-            _textAnoEgreso(),
+            _textDescripcion(),
             const SizedBox(height: 5),
-            _inputAnoEgreso(),
-            const SizedBox(height: 20),
-            _textNumero(),
-            const SizedBox(height: 5),
-            _inputNumero(),
+            _inputDescripcion(),
             const SizedBox(height: 20),
             _btnSiguiente(context),
             const SizedBox(height: 20),
@@ -54,12 +50,12 @@ class _FormEgreState extends State<FormEgre> {
     );
   }
 
-  Container _textUniversidad() {
+  Container _textPuesto() {
     return Container(
       margin: const EdgeInsets.symmetric(horizontal: 15),
       width: MediaQuery.of(context).size.width - 30,
       child: const Text(
-        "Centro de estudios superiores",
+        "Puesto o Ocupación",
         style: TextStyle(
             color: Colors.black,
             fontSize: 20
@@ -68,12 +64,12 @@ class _FormEgreState extends State<FormEgre> {
     );
   }
 
-  Container _textFacultad() {
+  Container _textEmpresa() {
     return Container(
       margin: const EdgeInsets.symmetric(horizontal: 15),
       width: MediaQuery.of(context).size.width - 30,
       child: const Text(
-        "Facultad o dependencia",
+        "Empresa",
         style: TextStyle(
             color: Colors.black,
             fontSize: 20
@@ -82,12 +78,12 @@ class _FormEgreState extends State<FormEgre> {
     );
   }
 
-  Container _textCarrera() {
+  Container _textCorreo() {
     return Container(
       margin: const EdgeInsets.symmetric(horizontal: 15),
       width: MediaQuery.of(context).size.width - 30,
       child: const Text(
-        "Licenciatura o Ingeniería",
+        "Correo Electronico empresarial",
         style: TextStyle(
             color: Colors.black,
             fontSize: 20
@@ -96,12 +92,12 @@ class _FormEgreState extends State<FormEgre> {
     );
   }
 
-  Container _textPlanEstudios() {
+  Container _textFechaA() {
     return Container(
       margin: const EdgeInsets.symmetric(horizontal: 15),
       width: MediaQuery.of(context).size.width - 30,
       child: const Text(
-        "Plan de Estudios",
+        "Fecha de Alta",
         style: TextStyle(
             color: Colors.black,
             fontSize: 20
@@ -110,12 +106,12 @@ class _FormEgreState extends State<FormEgre> {
     );
   }
 
-  Container _textInscripcion() {
+  Container _textFechaB() {
     return Container(
       margin: const EdgeInsets.symmetric(horizontal: 15),
       width: MediaQuery.of(context).size.width - 30,
       child: const Text(
-        "Fecha de Inscripción",
+        "Fecha de Baja",
         style: TextStyle(
             color: Colors.black,
             fontSize: 20
@@ -124,12 +120,12 @@ class _FormEgreState extends State<FormEgre> {
     );
   }
 
-  Container _textAnoEgreso() {
+  Container _textDescripcion() {
     return Container(
       margin: const EdgeInsets.symmetric(horizontal: 15),
       width: MediaQuery.of(context).size.width - 30,
       child: const Text(
-        "Año de Egreso",
+        "Descripcion breve de labor en la empresa ",
         style: TextStyle(
             color: Colors.black,
             fontSize: 20
@@ -138,21 +134,7 @@ class _FormEgreState extends State<FormEgre> {
     );
   }
 
-  Container _textNumero() {
-    return Container(
-      margin: const EdgeInsets.symmetric(horizontal: 15),
-      width: MediaQuery.of(context).size.width - 30,
-      child: const Text(
-        "# de Cedula Profesional",
-        style: TextStyle(
-            color: Colors.black,
-            fontSize: 20
-        ),
-      ),
-    );
-  }
-
-  Container _inputUniversidad() {
+  Container _inputPuesto() {
     return Container(
       decoration: BoxDecoration(borderRadius: BorderRadius.circular(5), border: Border.all(color: Colors.green)),
       padding: const EdgeInsets.symmetric(horizontal: 15),
@@ -160,14 +142,14 @@ class _FormEgreState extends State<FormEgre> {
       child: const TextField(
         style: TextStyle(fontSize: 20),
         decoration: InputDecoration(
-            hintText: "Universidad",
+            hintText: "Puesto",
             border: InputBorder.none
         ),
       ),
     );
   }
 
-  Container _inputFacultad() {
+  Container _inputEmpresa() {
     return Container(
       decoration: BoxDecoration(borderRadius: BorderRadius.circular(5), border: Border.all(color: Colors.green)),
       padding: const EdgeInsets.symmetric(horizontal: 15),
@@ -175,14 +157,14 @@ class _FormEgreState extends State<FormEgre> {
       child: const TextField(
         style: TextStyle(fontSize: 20),
         decoration: InputDecoration(
-            hintText: "Facultad",
+            hintText: "Empresa",
             border: InputBorder.none
         ),
       ),
     );
   }
 
-  Container _inputCarrera() {
+  Container _inputCorreo() {
     return Container(
       decoration: BoxDecoration(borderRadius: BorderRadius.circular(5), border: Border.all(color: Colors.green)),
       padding: const EdgeInsets.symmetric(horizontal: 15),
@@ -190,14 +172,14 @@ class _FormEgreState extends State<FormEgre> {
       child: const TextField(
         style: TextStyle(fontSize: 20),
         decoration: InputDecoration(
-            hintText: "Carrera",
+            hintText: "Correo electronico empresarial",
             border: InputBorder.none
         ),
       ),
     );
   }
 
-  Container _inputPlanEstudios() {
+  Container _inputFechaA() {
     return Container(
       decoration: BoxDecoration(borderRadius: BorderRadius.circular(5), border: Border.all(color: Colors.green)),
       padding: const EdgeInsets.symmetric(horizontal: 15),
@@ -205,14 +187,14 @@ class _FormEgreState extends State<FormEgre> {
       child: const TextField(
         style: TextStyle(fontSize: 20),
         decoration: InputDecoration(
-            hintText: "Plan de Estudios",
+            hintText: "Fecha de Alta",
             border: InputBorder.none
         ),
       ),
     );
   }
 
-  Container _inputInscripcion() {
+  Container _inputFechaB() {
     return Container(
       decoration: BoxDecoration(borderRadius: BorderRadius.circular(5), border: Border.all(color: Colors.green)),
       padding: const EdgeInsets.symmetric(horizontal: 15),
@@ -220,14 +202,14 @@ class _FormEgreState extends State<FormEgre> {
       child: const TextField(
         style: TextStyle(fontSize: 20),
         decoration: InputDecoration(
-            hintText: "Fecha de Inscripción",
+            hintText: "Fecha de Baja",
             border: InputBorder.none
         ),
       ),
     );
   }
 
-  Container _inputAnoEgreso() {
+  Container _inputDescripcion() {
     return Container(
       decoration: BoxDecoration(borderRadius: BorderRadius.circular(5), border: Border.all(color: Colors.green)),
       padding: const EdgeInsets.symmetric(horizontal: 15),
@@ -235,30 +217,12 @@ class _FormEgreState extends State<FormEgre> {
       child: const TextField(
         style: TextStyle(fontSize: 20),
         decoration: InputDecoration(
-            hintText: "Año",
+            hintText: "Descripcion breve de labor en la empresa",
             border: InputBorder.none
         ),
       ),
     );
   }
-
-  Container _inputNumero() {
-    return Container(
-      decoration: BoxDecoration(borderRadius: BorderRadius.circular(5), border: Border.all(color: Colors.green)),
-      padding: const EdgeInsets.symmetric(horizontal: 15),
-      margin: const EdgeInsets.symmetric(horizontal: 15),
-      child: const TextField(
-        style: TextStyle(fontSize: 20),
-        decoration: InputDecoration(
-            hintText: "# de Cedula Profesional",
-            border: InputBorder.none
-        ),
-      ),
-    );
-  }
-
-
-
 
   Container _btnSiguiente(BuildContext context) {
     return Container(
@@ -267,7 +231,7 @@ class _FormEgreState extends State<FormEgre> {
       width: MediaQuery.of(context).size.width-30,
       child: ElevatedButton(
         onPressed: () {
-          Navigator.pushReplacementNamed(context, '/exp_egre');
+          Navigator.pushReplacementNamed(context, '/registroCompletado');
         },
         child: const Text('SIGUIENTE'),
       ),
@@ -282,7 +246,7 @@ class _FormEgreState extends State<FormEgre> {
       child: ElevatedButton(
         style: const ButtonStyle(),
         onPressed: () {
-          Navigator.pushReplacementNamed(context, '/tipo_registro');
+          Navigator.pushReplacementNamed(context, '/registroDoc');
         },
         child: const Text('ATRAS'),
       ),

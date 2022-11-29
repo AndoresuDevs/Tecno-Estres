@@ -16,13 +16,20 @@ class _RegistroCompletadoState extends State<RegistroCompletado> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const SizedBox(height: 20),
-            const Text('Empieza a agregar cosas aqui'),
-            const SizedBox(height: 20),
+            const SizedBox(height: 25),
+            const Text('¡Tu registro se ha completado con exito! ',
+              style: TextStyle(
+                  color: Colors.black,
+                  fontSize: 20
+              ),
+            ),
+            const SizedBox(height: 50),
             _text(),
-            const SizedBox(height: 20),
-            _btn(context),
-            const SizedBox(height: 20),
+            const SizedBox(height: 40),
+            _btnAvanzar(context),
+            const SizedBox(height: 40),
+            _btnSalir(context),
+            const SizedBox(height: 40),
           ],
         ),
       ),
@@ -34,19 +41,32 @@ class _RegistroCompletadoState extends State<RegistroCompletado> {
       margin: const EdgeInsets.symmetric(horizontal: 15),
       width: MediaQuery.of(context).size.width - 30,
       child: const Text(
-        "Texto",
+        "Te damos la bienvenida a IMAvision, empieza a apoyar a los estudiantes de ingeniería para ayudarlos a destacar en tu profesión",
         style: TextStyle(
-            color: Colors.black,
             fontSize: 20
         ),
       ),
     );
   }
 
-
+  Container _btnAvanzar(BuildContext context) {
+    return Container(
+      height: 40,
+      margin: const EdgeInsets.all(15),
+      width: MediaQuery.of(context).size.width-30,
+      child: ElevatedButton(
+        style: const ButtonStyle(),
+        onPressed: () {
+          Navigator.pushReplacementNamed(context, '/Inicio');
+        },
+        child: const Text('Avanzar a Inicio'),
+      ),
+    );
+  }
+}
 
   //PLANTILLA BOTON
-  Container _btn(BuildContext context) {
+  Container _btnSalir(BuildContext context) {
     return Container(
       height: 40,
       margin: const EdgeInsets.all(15),
@@ -56,8 +76,8 @@ class _RegistroCompletadoState extends State<RegistroCompletado> {
         onPressed: () {
           Navigator.pushReplacementNamed(context, '/');
         },
-        child: const Text('CONTINUAR'),
+        child: const Text('Salir'),
       ),
     );
   }
-}
+
