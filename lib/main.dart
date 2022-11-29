@@ -16,6 +16,7 @@ import 'package:tecno_estres/vistas/recuperacion_4.dart';
 import 'package:tecno_estres/vistas/registro_completo.dart';
 import 'package:tecno_estres/vistas/registro_general.dart';
 import 'package:tecno_estres/vistas/tipo_de_registro.dart';
+import 'package:tecno_estres/vistas/menu.dart';
 
 void main() {
   runApp( const MyApp());
@@ -55,6 +56,7 @@ class MyApp extends StatelessWidget {
         '/Inicio':(_)=> const Inicio(),
         '/encuesta_1':(_)=> const Encuesta_1(),
         '/encuesta_2':(_)=> const Encuesta_2(),
+        '/menu':(_)=> const Menu(),
 
 
 

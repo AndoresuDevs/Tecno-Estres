@@ -57,7 +57,7 @@ class _RegistroCompletadoState extends State<RegistroCompletado> {
       child: ElevatedButton(
         style: const ButtonStyle(),
         onPressed: () {
-          Navigator.pushReplacementNamed(context, '/Inicio');
+          Navigator.pushReplacementNamed(context, '/menu');
         },
         child: const Text('Avanzar a Inicio'),
       ),
