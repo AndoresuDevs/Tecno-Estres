@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:tecno_estres/vistas/inicio.dart';
 import 'package:tecno_estres/vistas/notificaciones.dart';
+import 'package:tecno_estres/vistas/foro.dart';
 class Menu extends StatefulWidget {
   const Menu({Key? key}) : super(key: key);
 
@@ -17,10 +18,7 @@ class _BasicBottomNavBarState extends State<Menu> {
       Icons.business,
       size: 150,
     ),
-    Icon(
-      Icons.chat,
-      size: 150,
-    ),
+    Foro(),
     Notificacion(),
     Icon(
       Icons.account_box,
