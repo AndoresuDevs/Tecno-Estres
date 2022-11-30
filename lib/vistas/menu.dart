@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:tecno_estres/vistas/inicio.dart';
+import 'package:tecno_estres/vistas/laboral.dart';
 import 'package:tecno_estres/vistas/notificaciones.dart';
 import 'package:tecno_estres/vistas/foro.dart';
+import 'package:tecno_estres/vistas/perfil.dart';
 class Menu extends StatefulWidget {
   const Menu({Key? key}) : super(key: key);
 
@@ -14,16 +16,11 @@ class _BasicBottomNavBarState extends State<Menu> {
 
   static const List<Widget> _pages = <Widget>[
     Inicio(),
-    Icon(
-      Icons.business,
-      size: 150,
-    ),
+    Laboral(),
     Foro(),
     Notificacion(),
-    Icon(
-      Icons.account_box,
-      size: 150,
-    ),
+    perfil()
+
   ];
 
   void _onItemTapped(int index) {

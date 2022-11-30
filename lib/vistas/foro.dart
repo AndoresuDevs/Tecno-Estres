@@ -18,36 +18,36 @@ class _ForoState extends State<Foro> {
           child: ListView(
             children: <Widget> [
               const SizedBox(height: 20),
-              ListTile(
+              const ListTile(
                   title: Text("Mensaje"),
                   subtitle: Text(
                       "JUAN FRANCISCO: ¿Como le hicieron en la actividad 2?"),
                   leading: Icon(Icons.message)),
               const SizedBox(height: 20),
-              ListTile(
+              const ListTile(
                   title: Text("Mensaje"),
                   subtitle: Text(
                       "JULIAN LOPEZ: Solamente contestas la encuesta y automaticamente se registra como completada."),
                   leading: Icon(Icons.message)),
               const SizedBox(height: 20),
-              ListTile(
+              const ListTile(
                   title: Text("Mensaje"),
                   subtitle: Text(
                       "JUAN FRANCISCO: Te puedo mandar mensaje privado para verlo mejor?'"),
                   leading: Icon(Icons.message)),
               const SizedBox(height: 20),
-              ListTile(
+              const ListTile(
                   title: Text("Mensaje"),
                   subtitle: Text(
                       "Katia Gonzalez: Yo tengo el mismo error, me pueden ayudar tambien?"),
                   leading: Icon(Icons.message)),
               const SizedBox(height: 20),
-              ListTile(
+              const ListTile(
                   title: Text("Mensaje"),
                   subtitle: Text(
                       "JULIAN LOPEZ: Claro, vayamos al foro de dudas."),
                   leading: Icon(Icons.message)),
-              ListTile(
+              const ListTile(
                   title: Text("Mensaje"),
                   subtitle: Text(
                       "Katia Gonzalez: Ahi los veo, gracias!."),
