@@ -103,7 +103,7 @@ class _FormLoginState extends State<FormLogin> {
           width: MediaQuery.of(context).size.width-30,
           child: ElevatedButton(
             onPressed: () {
-              Navigator.pushReplacementNamed(context, '/registroCompletado');
+              Navigator.pushReplacementNamed(context, '/menu');
             },
             child: const Text('Iniciar Sesion'),
           ),
