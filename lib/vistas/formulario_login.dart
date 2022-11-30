@@ -18,8 +18,7 @@ class _FormLoginState extends State<FormLogin> {
         appBar: AppBar(
         title: const Text('Login'),
       ),
-      body: Column(
-      children: [
+      body:
         SingleChildScrollView( //SCROLL VIEW
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -33,7 +32,6 @@ class _FormLoginState extends State<FormLogin> {
                   children: const [
                     Text( "Bienvenido a IMAvision!", style: TextStyle(fontSize: 34, decorationStyle: TextDecorationStyle.solid),),
                     SizedBox(height: 20),
-
                   ],
                 ),
               ),
@@ -61,9 +59,6 @@ class _FormLoginState extends State<FormLogin> {
             ],
           ),
         ),
-      ],
-    )
-
     );
 
     /*
